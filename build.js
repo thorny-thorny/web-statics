@@ -31,6 +31,10 @@ const build = async (base) => {
   await copyFiles('css', path.join(indexDir, 'css'))
   await copyFiles(path.join('index', 'img'), path.join(indexDir, 'img'))
   await renderPug(path.join('index', 'index.pug'), path.join(indexDir, 'index.html'))
+
+  const twoColoredRangeDir = path.join(base, 'two-colored-range')
+  await copyFiles('css', path.join(twoColoredRangeDir, 'css'))
+  await renderPug(path.join('two-colored-range', 'index.pug'), path.join(twoColoredRangeDir, 'index.html'))
 }
 
 build(process.argv[2] || 'build')
