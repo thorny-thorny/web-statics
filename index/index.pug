@@ -1,0 +1,50 @@
+mixin featureBadge(name)
+  span.badge.rounded-pill.bg-secondary= name
+  | 
+
+mixin projectCard(name, image, features, text)
+  .card
+    img.card-img-top(src=image)
+    .card-body
+      h5.card-title= name
+      p.card-text.mb-2
+        each feature in features
+          +featureBadge(feature)
+      p.card-text= text
+      block
+
+mixin primaryProjectLink(title, url)
+  a.btn.btn-primary.card-link(href=url role="button")= title
+
+mixin secondaryProjectLink(title, url)
+  a.card-link.align-middle(href=url)= title
+
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(href="css/bootstrap.min.css" rel="stylesheet")
+  body
+    .container.px-4.py-5
+      p Hi! I'm Thorny. This page is in development.
+      h2.pb-2.mb-3.border-bottom Projects in development
+      .row.row-cols-1.row-cols-lg-3.g-4
+        .col
+          +projectCard(
+            "Two-colored range",
+            "img/two-colored-range.png",
+            ["Common Kotlin", "TDD"],
+            "A common Kotlin library for ranges with each part having one of two colors. A typical application is to track which parts of a file has been downloaded during partial download."
+          )
+            +primaryProjectLink("Visualizer", "https://two-colored-range.thorny.me/visualizer")
+            +secondaryProjectLink("Project page", "https://two-colored-range.thorny.me")
+        .col
+          +projectCard(
+            "Ploxorz",
+            "img/ploxorz.png",
+            ["PICO-8", "Lua"],
+            "A demake of old flash game \"Bloxorz\" for PICO-8."
+          )
+            +primaryProjectLink("Play", "https://ploxorz.thorny.me")
+            +secondaryProjectLink("Project page", "https://ploxorz.thorny.me")
