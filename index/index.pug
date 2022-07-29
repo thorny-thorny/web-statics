@@ -28,6 +28,16 @@ html
   body
     .container.px-4.py-5
       p Hi! I'm Thorny. This page is in development.
+      h2.pb-2.mb-3.border-bottom My links
+      ul
+        li
+          a(href="https://github.com/thorny-thorny") GitHub profile
+        li
+          a(href="https://leetcode.com/thorny-thorny/") LeetCode profile
+        li
+          a(href="https://blog.thorny.me") My blog
+        li
+          a(href="mailto:thorny.develops@gmail.com") Send me email
       h2.pb-2.mb-3.border-bottom Projects in development
       .row.row-cols-1.row-cols-lg-3.g-4
         .col
@@ -48,3 +58,24 @@ html
           )
             +primaryProjectLink("Play", "https://ploxorz.thorny.me")
             +secondaryProjectLink("Project page", "https://ploxorz.thorny.me")
+      p
+      h2.pb-2.mb-3.border-bottom Finished projects
+      .row.row-cols-1.row-cols-lg-3.g-4
+        .col
+          +projectCard(
+            "Kotlin/Native web server",
+            "img/kotlin-native-web-server.png",
+            ["Kotlin/Native", "C Interop"],
+            "A proof of concept of a simple Kotlin/Native web-server with libmicrohttpd interop."
+          )
+            +primaryProjectLink("Download", "https://github.com/thorny-thorny/kotlin-native-web-server/releases")
+            +secondaryProjectLink("Project page", "https://github.com/thorny-thorny/kotlin-native-web-server")
+        .col
+          +projectCard(
+            "Adventure jam 2022 submission",
+            "img/adventure-jam-2022.png",
+            ["Unity", "Adventure creator"],
+            "A not serious adventure game, my first experience as a Unity developer."
+          )
+            +primaryProjectLink("Play", "https://softsound.itch.io/chapter-1")
+            +secondaryProjectLink("Read post", "https://blog.thorny.me/post/adventure-jam-2022/")
