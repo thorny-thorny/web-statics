@@ -27,9 +27,10 @@ html
     link(href="css/bootstrap.min.css" rel="stylesheet")
   body
     .container.px-4.py-5
-      p Hi! I'm Thorny. This page is in development.
       h2.pb-2.mb-3.border-bottom My links
       ul
+        li
+          a(href="https://www.linkedin.com/in/dgorev/") LinkedIn profile
         li
           a(href="https://github.com/thorny-thorny") GitHub profile
         li
@@ -38,27 +39,6 @@ html
           a(href="https://blog.thorny.me") My blog
         li
           a(href="mailto:thorny.develops@gmail.com") Send me email
-      h2.pb-2.mb-3.border-bottom Projects in development
-      .row.row-cols-1.row-cols-lg-3.g-4
-        .col
-          +projectCard(
-            "Two-colored range",
-            "img/two-colored-range.png",
-            ["Common Kotlin", "TDD"],
-            "A common Kotlin library for ranges with each part having one of two colors. A typical application is to track which parts of a file has been downloaded during partial download."
-          )
-            +primaryProjectLink("Visualizer", "https://two-colored-range.thorny.me/visualizer")
-            +secondaryProjectLink("Project page", "https://two-colored-range.thorny.me")
-        .col
-          +projectCard(
-            "Ploxorz",
-            "img/ploxorz.png",
-            ["PICO-8", "Lua"],
-            "A demake of old flash game \"Bloxorz\" for PICO-8."
-          )
-            +primaryProjectLink("Play", "https://ploxorz.thorny.me")
-            +secondaryProjectLink("Project page", "https://ploxorz.thorny.me")
-      p
       h2.pb-2.mb-3.border-bottom Finished projects
       .row.row-cols-1.row-cols-lg-3.g-4
         .col
@@ -79,3 +59,24 @@ html
           )
             +primaryProjectLink("Play", "https://softsound.itch.io/chapter-1")
             +secondaryProjectLink("Read post", "https://blog.thorny.me/post/adventure-jam-2022/")
+      p
+      h2.pb-2.mb-3.border-bottom Projects on hold
+      .row.row-cols-1.row-cols-lg-3.g-4
+        .col
+          +projectCard(
+            "Two-colored range",
+            "img/two-colored-range.png",
+            ["Common Kotlin", "TDD"],
+            "A common Kotlin library for ranges with each part having one of two colors. A typical application is to track which parts of a file has been downloaded during partial download."
+          )
+            +primaryProjectLink("Visualizer", "https://two-colored-range.thorny.me/visualizer")
+            +secondaryProjectLink("Project page", "https://two-colored-range.thorny.me")
+        .col
+          +projectCard(
+            "Ploxorz",
+            "img/ploxorz.png",
+            ["PICO-8", "Lua"],
+            "A demake of old flash game \"Bloxorz\" for PICO-8."
+          )
+            +primaryProjectLink("Play", "https://ploxorz.thorny.me")
+            +secondaryProjectLink("Project page", "https://ploxorz.thorny.me")
