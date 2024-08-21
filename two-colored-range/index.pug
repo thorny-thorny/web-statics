@@ -6,15 +6,23 @@ html
     link(href="css/bootstrap.min.css" rel="stylesheet")
   body
     .container.px-4.py-5
-      h1 Two colored range
-      ul
-        li
-          a(href="https://github.com/thorny-thorny/two-colored-range") Source code
-        li
-          a(href="/docs") Documentation
-        li
-          a(href="/test") Test report
-        li
-          a(href="/coverage") Coverage report
-        li
-          a(href="/visualizer") Visualizer
+      h1 Two-colored range
+      p
+        img(src="img/visualization-example.png").img-fluid.w-100
+      p Two-colored range is data structure that efficiently stores and modifies data of a range where each point is colored in one of two possible colors. This project contains mutable and immutable two-colored range interfaces and an implementation based on ArrayList.
+      h2 Supported platforms and installation
+      p While being a part of #[a(href="https://kotlinlang.org/docs/multiplatform.html") Kotlin Multiplatform] project, the entire codebase of two-colored range is written in Kotlin Common and could be used on any supported platform. Currently the project provides artifacts for JVM, JS and MacOSX64 platforms. You can use #[a(href="https://mvnrepository.com/artifact/me.thorny") Maven Repository] to locate artifact for required platform and find installation instructions.
+      h2 Documentation, test coverage and examples
+      p The library is developed by following #[a(href="https://en.wikipedia.org/wiki/Test-driven_development") test-driven development] principles, it is covered with tests and documentation by 100%. You can find example of using the library at #[a(href="https://github.com/thorny-thorny/two-colored-range-visualizer") two-colored-range-visualizer]. Documentation, reports and example are available online using links:
+      p
+        ul
+          li
+            a(href="https://github.com/thorny-thorny/two-colored-range") Source code
+          li
+            a(href="/docs") Documentation
+          li
+            a(href="/test") Test report
+          li
+            a(href="/coverage") Coverage report
+          li
+            a(href="/visualizer") Visualizer
