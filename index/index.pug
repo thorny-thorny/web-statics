@@ -43,12 +43,21 @@ html
       .row.row-cols-1.row-cols-lg-3.g-4
         .col
           +projectCard(
+            "Two-colored range",
+            "img/two-colored-range.png",
+            ["Kotlin Common", "TDD"],
+            "A Kotlin Common library for ranges where each point has one of two possible colors. One of applications is tracking which parts of a file has been downloaded during partial download."
+          )
+            +primaryProjectLink("Visualizer", "https://two-colored-range.thorny.me/visualizer")
+            +secondaryProjectLink("Project page", "https://two-colored-range.thorny.me")
+        .col
+          +projectCard(
             "Kotlin/Native web server",
             "img/kotlin-native-web-server.png",
             ["Kotlin/Native", "C Interop"],
             "A proof of concept of a simple Kotlin/Native web-server with libmicrohttpd interop."
           )
-            +primaryProjectLink("Download", "https://github.com/thorny-thorny/kotlin-native-web-server/releases")
+            +primaryProjectLink("Test online", "https://knws.thorny.me/")
             +secondaryProjectLink("Project page", "https://github.com/thorny-thorny/kotlin-native-web-server")
         .col
           +projectCard(
@@ -64,19 +73,10 @@ html
       .row.row-cols-1.row-cols-lg-3.g-4
         .col
           +projectCard(
-            "Two-colored range",
-            "img/two-colored-range.png",
-            ["Common Kotlin", "TDD"],
-            "A common Kotlin library for ranges with each part having one of two colors. A typical application is to track which parts of a file has been downloaded during partial download."
-          )
-            +primaryProjectLink("Visualizer", "https://two-colored-range.thorny.me/visualizer")
-            +secondaryProjectLink("Project page", "https://two-colored-range.thorny.me")
-        .col
-          +projectCard(
             "Ploxorz",
             "img/ploxorz.png",
             ["PICO-8", "Lua"],
             "A demake of old flash game \"Bloxorz\" for PICO-8."
           )
-            +primaryProjectLink("Play", "https://ploxorz.thorny.me")
-            +secondaryProjectLink("Project page", "https://ploxorz.thorny.me")
+            +primaryProjectLink("Play demo", "https://ploxorz.thorny.me")
+            +secondaryProjectLink("Source code", "https://github.com/thorny-thorny/ploxorz")
